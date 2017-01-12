@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UAIPopContextMenuView.h"
+#import "SKPopContextMenuView.h"
 
 @interface ViewController ()<UITableViewDelegate>
 
@@ -34,7 +34,7 @@
     UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
     CGPoint point = cell.center;
     point = [tableView convertPoint:cell.center toView:self.view];
-    UAIPopContextMenuView *pop = [[UAIPopContextMenuView alloc] initWithPoint:point width:point.x data:self.popMeunuSource];
+    SKPopContextMenuView *pop = [[SKPopContextMenuView alloc] initWithPoint:point width:point.x data:self.popMeunuSource];
     
     __weak __typeof(self) weakSelf = self;
     pop.selectRowAtIndex = ^(NSString * selectedItem){
